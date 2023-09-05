@@ -1,0 +1,43 @@
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+}
+#main-nav button {
+  font-size: 0.9rem;
+}
+#main-nav .subpage-links {
+  display: flex;
+  gap: 50px;
+}
+#main-nav .settings {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+#main-nav .settings .menu {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #main-nav .subpage-links {
+    display: none;
+  }
+  #main-nav .settings .menu {
+    display: contents;
+  }
+}
+@media screen and (max-width: 400px) {
+  #main-nav .settings button:not(.menu) {
+    display: none;
+  }
+}
+[data-theme=light] #main-nav button {
+  color: #060038;
+}
+[data-theme=light] #main-nav button:hover {
+  color: #4c44e4;
+}
+
+/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mateusz Baranowicz - BLOG</title>
+
+  <link rel="stylesheet" href="styles/css/index_page.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="assets/fontawesome/js/fontawesome.min.js" defer></script>
+  <script src="assets/fontawesome/js/solid.min.js" defer></script>
+  <script src="assets/fontawesome/js/regular.min.js" defer></script>
+  <script src="assets/fontawesome/js/brands.min.js" defer></script>
+
+  <script src="src/utils/string.js"></script>
+  <script src="src/utils/date.js"></script>
+  <script src="src/utils/post.js"></script>
+
+  <script src="src/nav.js" defer></script>
+  <script src="src/top_posts.js" type="module" defer></script>
+  <script src="src/top_tags.js" type="module" defer></script>
+
+  <script src="src/main.js" type="module" defer></script>
+</head>
+
+<body>
+  <div id="menu">
+    <button class="nav close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <h1 class="header">Menu</h1>
+
+    <!-- LINKI DO PODSTRON -->
+    <div class="subpage-links">
+      <button class="transparent"><i class="fa-solid fa-arrow-right"></i>Najnowsze</button>
+      <button class="transparent"><i class="fa-solid fa-arrow-right"></i>Najpopularniejsze</button>
+    </div>
+
+    <!-- USTAWIENIA -->
+    <div class="settings">
+      <button class="nav change-theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="nav">
+        <i class="fa-solid fa-square-rss"></i>
+      </button>
+    </div>
+  </div>
+
+  <nav id="main-nav">
+    <!-- LOGO -->
+    <button id="logo" class="transparent">Mateusz Baranowicz</button>
+
+    <!-- LINKI DO PODSTRON -->
+    <div class="subpage-links">
+      <button class="nav">Najnowsze</button>
+      <button class="nav">Najpopularniejsze</button>
+    </div>
+
+    <!-- USTAWIENIA -->
+    <div class="settings">
+      <button class="nav change-theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="nav">
+        <i class="fa-solid fa-square-rss"></i>
+      </button>
+      <button class="nav menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header>
+    <h1 class="title">Witaj na blogu</h1>
+    <div class="content">
+      <p>poświęconym programowaniu!</p>
+    </div>
+  </header>
+
+  <div id="wrapper">
+    <!-- NAJNOWSZE POSTY -->
+    <main>
+      <h2>Najnowsze</h2>
+      <section id="posts"></section>
+    </main>
+
+    <aside>
+      <!-- TOP TAGI -->
+      <section>
+        <h2>Top tagi</h2>
+        <div id="top-tags"></div>
+      </section>
+
+      <!-- TOP POSTY -->
+      <section>
+        <h2>Top posty</h2>
+        <div id="top-posts"></div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="separator"></div>
+
+  <footer>
+    <span id="copyright"><i class="fa-regular fa-copyright"></i>&nbsp; 2023</span>
+    <span id="author">
+      Made with
+      <i class="fa-solid fa-heart" style="color: #ff0000"></i>
+      by
+      <a href="http://baranowicz.pl" target="_blank" rel="noopener noreferrer" title="Moja wizytówka!">
+        Mateusz Baranowicz
+      </a>
+    </span>
+  </footer>
+</body>
+
+</html>

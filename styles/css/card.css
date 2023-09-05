@@ -1,0 +1,55 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+.card p {
+  color: #cccccc;
+}
+.card .info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card .info .header {
+  transition: color 0.2s ease-out;
+}
+.card .info .metadata {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.card .info .metadata .tags {
+  opacity: 0.25;
+}
+.card .info .metadata .date {
+  opacity: 0.5;
+}
+.card .btns {
+  display: flex;
+  gap: 10px;
+}
+.card:hover .info .header {
+  color: #8696fe;
+}
+
+@media screen and (max-width: 500px) {
+  .card .info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card .info .metadata {
+    align-self: flex-start;
+    flex-direction: row-reverse;
+  }
+  .card .summary {
+    text-align: justify;
+  }
+  .card .btns {
+    justify-content: right;
+  }
+}
+
+/*# sourceMappingURL=card.css.map */

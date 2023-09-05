@@ -1,0 +1,96 @@
+button,
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+button svg,
+.btn svg {
+  width: 15px;
+  min-height: 15px;
+  color: #e6e6e6;
+}
+button svg[data-color=stroke],
+.btn svg[data-color=stroke] {
+  stroke: #e6e6e6;
+}
+button svg[data-color=fill],
+.btn svg[data-color=fill] {
+  fill: #e6e6e6;
+}
+button.nav,
+.btn.nav {
+  background-color: transparent;
+  transition-property: color;
+  color: #e6e6e6;
+}
+button.nav svg,
+.btn.nav svg {
+  width: 20px;
+  min-height: 20px;
+}
+button.nav:hover,
+.btn.nav:hover {
+  color: #8696fe;
+}
+button.transparent,
+.btn.transparent {
+  background-color: transparent;
+  transition-property: color;
+  color: #e6e6e6;
+}
+button.transparent:hover,
+.btn.transparent:hover {
+  color: #8696fe;
+}
+button.secondary,
+.btn.secondary {
+  padding: 5px 10px;
+  background-color: transparent;
+  transition-property: color;
+  color: #e6e6e6;
+}
+button.secondary:hover,
+.btn.secondary:hover {
+  color: #8696fe;
+}
+button.tag,
+.btn.tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #4c44e4;
+  color: #e6e6e6;
+}
+button.tag:hover,
+.btn.tag:hover {
+  background-color: #7670eb;
+  scale: 1.05;
+}
+
+[data-theme=light] button span {
+  color: #e6e6e6;
+}
+[data-theme=light] button svg {
+  color: #1c1c1c;
+}
+[data-theme=light] button svg[data-color=stroke] {
+  stroke: #1c1c1c;
+}
+[data-theme=light] button svg[data-color=fill] {
+  fill: #1c1c1c;
+}
+[data-theme=light] button.tag {
+  color: #10009e;
+  background-color: #e6e6e6;
+}
+[data-theme=light] button.tag:hover {
+  background-color: #f2f2f2;
+}
+
+/*# sourceMappingURL=button.css.map */

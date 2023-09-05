@@ -1,0 +1,1 @@
+const getLocaleDate = (date) => new Date(Date.parse(date)).toLocaleDateString();

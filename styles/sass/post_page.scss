@@ -1,0 +1,65 @@
+@use 'global';
+@use 'nav';
+@use 'button';
+@use 'card';
+@use 'link';
+@use 'colors';
+@use 'menu';
+
+#post-content {
+  position: relative;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: colors.$white;
+  }
+}
+
+header {
+  .title {
+    position: relative;
+
+    top: 0;
+
+    transition: opacity .5s ease-out,
+      top .5s ease-out;
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    top: 0;
+
+    transition: opacity .5s ease-out,
+      top .5s ease-out;
+
+    .created {
+      opacity: .75;
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      display: flex;
+
+      width: fit-content;
+      gap: 10px;
+
+      .tag {
+        flex: 1;
+        flex-basis: 100px;
+      }
+    }
+  }
+}

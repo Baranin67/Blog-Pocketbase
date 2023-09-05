@@ -1,0 +1,11 @@
+@use 'colors';
+
+a,
+a:visited {
+	color: colors.$white;
+	transition: color .2s ease-out;
+}
+
+a:hover {
+	color: colors.$light-blue;
+}

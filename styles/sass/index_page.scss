@@ -1,0 +1,28 @@
+@use 'global';
+@use 'nav';
+@use 'button';
+@use 'card';
+@use 'link';
+@use 'colors';
+@use 'menu';
+
+#wrapper {
+  main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px;
+    flex: 9999;
+
+    #posts {
+      display: flex;
+      flex-direction: column;
+
+      gap: 50px;
+
+      .info {
+        color: colors.$white;
+      }
+    }
+  }
+}

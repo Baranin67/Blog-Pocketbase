@@ -1,0 +1,6 @@
+{
+	"unknownPostFallback": "/",
+	"apiPosts": "/api/collections/posts/records",
+	"apiTags": "/api/collections/tags/records",
+	"post": "/post.html?name=%s"
+}

@@ -1,0 +1,60 @@
+@use 'globals';
+@use 'colors';
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 20px 0;
+
+  button {
+    font-size: .9rem;
+  }
+
+  .subpage-links {
+    display: flex;
+
+    gap: 50px;
+  }
+
+  .settings {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    .menu {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #main-nav {
+    .subpage-links {
+      display: none;
+    }
+
+    .settings .menu {
+      display: contents;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #main-nav {
+    .settings button:not(.menu) {
+      display: none;
+    }
+  }
+}
+
+[data-theme=light] {
+  #main-nav button {
+    color: colors.$black-navy;
+
+    &:hover {
+      color: colors.$blue;
+    }
+  }
+}

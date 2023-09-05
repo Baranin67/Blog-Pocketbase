@@ -1,0 +1,82 @@
+@use 'colors';
+
+#menu {
+	box-sizing: border-box;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	top: -100%;
+	left: 0;
+	padding: 50px;
+	opacity: 0;
+
+	background-color: colors.$black-grey;
+	transition: opacity .5s ease-out,
+		top .5s ease-out,
+		background-color .2s ease-out;
+
+	.header {
+		color: colors.$purple;
+	}
+
+	svg {
+		width: 30px;
+		height: 30px;
+	}
+
+	button.close {
+		position: absolute;
+
+		top: 20px;
+		right: 20px;
+	}
+
+	.subpage-links button {
+		font-size: 1.5rem;
+
+		svg {
+			width: 25px;
+			height: 25px;
+			opacity: .5;
+		}
+	}
+
+	.settings {
+		display: flex;
+
+		gap: 50px;
+	}
+}
+
+html:has(#menu[data-active=true]) {
+	overflow: hidden;
+}
+
+#menu[data-active=true] {
+	opacity: 1;
+	top: 0;
+}
+
+[data-theme=light] {
+	#menu {
+		background-color: colors.$white;
+
+		button {
+			color: colors.$black-grey;
+
+			svg {
+				color: colors.$black-grey;
+			}
+
+			&:hover {
+				color: colors.$blue;
+			}
+		}
+	}
+}

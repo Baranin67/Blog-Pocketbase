@@ -1,0 +1,65 @@
+#menu {
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  padding: 50px;
+  opacity: 0;
+  background-color: #1c1c1c;
+  transition: opacity 0.5s ease-out, top 0.5s ease-out, background-color 0.2s ease-out;
+}
+#menu .header {
+  color: #794dff;
+}
+#menu svg {
+  width: 30px;
+  height: 30px;
+}
+#menu button.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#menu .subpage-links button {
+  font-size: 1.5rem;
+}
+#menu .subpage-links button svg {
+  width: 25px;
+  height: 25px;
+  opacity: 0.5;
+}
+#menu .settings {
+  display: flex;
+  gap: 50px;
+}
+
+html:has(#menu[data-active=true]) {
+  overflow: hidden;
+}
+
+#menu[data-active=true] {
+  opacity: 1;
+  top: 0;
+}
+
+[data-theme=light] #menu {
+  background-color: #e6e6e6;
+}
+[data-theme=light] #menu button {
+  color: #1c1c1c;
+}
+[data-theme=light] #menu button svg {
+  color: #1c1c1c;
+}
+[data-theme=light] #menu button:hover {
+  color: #4c44e4;
+}
+
+/*# sourceMappingURL=menu.css.map */

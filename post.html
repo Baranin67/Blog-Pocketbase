@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>%s</title>
+
+  <link rel="stylesheet" href="styles/css/post_page.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <script src="assets/fontawesome/js/fontawesome.min.js" defer></script>
+  <script src="assets/fontawesome/js/solid.min.js" defer></script>
+  <script src="assets/fontawesome/js/regular.min.js" defer></script>
+  <script src="assets/fontawesome/js/brands.min.js" defer></script>
+
+  <script src="src/utils/date.js" defer></script>
+  <script src="src/utils/string.js" defer></script>
+
+  <script src="src/nav.js" type="module" defer></script>
+  <script src="src/top_posts.js" type="module" defer></script>
+  <script src="src/top_tags.js" type="module" defer></script>
+
+  <script src="src/post_page.js" type="module" defer></script>
+</head>
+
+<body>
+  <div id="menu">
+    <button class="nav close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <h1 class="header">Menu</h1>
+
+    <!-- LINKI DO PODSTRON -->
+    <div class="subpage-links">
+      <button class="transparent"><i class="fa-solid fa-arrow-right"></i>Najnowsze</button>
+      <button class="transparent"><i class="fa-solid fa-arrow-right"></i>Najpopularniejsze</button>
+    </div>
+
+    <!-- USTAWIENIA -->
+    <div class="settings">
+      <button class="nav change-theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="nav">
+        <i class="fa-solid fa-square-rss"></i>
+      </button>
+    </div>
+  </div>
+
+  <nav id="main-nav">
+    <!-- LOGO -->
+    <button id="logo" class="transparent" onclick="window.location.href='/'">Mateusz Baranowicz</button>
+
+    <!-- LINKI DO PODSTRON -->
+    <div class="subpage-links">
+      <button class="nav">Najnowsze</button>
+      <button class="nav">Najpopularniejsze</button>
+    </div>
+
+    <!-- USTAWIENIA -->
+    <div class="settings">
+      <button class="nav change-theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="nav">
+        <i class="fa-solid fa-square-rss"></i>
+      </button>
+      <button class="nav menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header>
+    <div id="post-info-loading-fallback-wrapper" class="loading-fallback-wrapper">
+      <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+    </div>
+    <h1 class="title hidden">%s</h1>
+    <div class="content hidden">
+      <span>
+        <span class="author">%s</span>&nbsp;&nbsp;&nbsp;
+        <span class="created">%s</span>
+      </span>
+      <span class="tags"></span>
+      <!-- <table>
+        <tbody>
+          <tr>
+            <td>Autor</td>
+            <td>
+              <p class="author">%s</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Utworzono</td>
+            <td>
+              <p class="created">%s</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Zaktualizowano</td>
+            <td>
+              <p class="updated">%s</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Wyświetlenia</td>
+            <td>
+              <p class="views">%s</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Tagi</td>
+            <td>
+              <p class="tags">%s</p>
+            </td>
+          </tr>
+        </tbody>
+      </table> -->
+    </div>
+  </header>
+
+  <div id="wrapper">
+    <!-- POST -->
+    <main>
+      <section id="post-content">
+        <div id="post-content-loading-fallback-wrapper" class="loading-fallback-wrapper">
+          <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <!-- TOP TAGI -->
+      <section>
+        <h2>Top tagi</h2>
+        <div id="top-tags"></div>
+      </section>
+
+      <!-- TOP POSTY -->
+      <section>
+        <h2>Top posty</h2>
+        <div id="top-posts"></div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="separator"></div>
+
+  <footer>
+    <span id="copyright">&copy; 2023</span>
+    <span id="author">
+      Made with ❤️ by
+      <a href="http://baranowicz.pl" target="_blank" rel="noopener noreferrer" title="Moja wizytówka!">
+        Mateusz Baranowicz
+      </a>
+    </span>
+  </footer>
+</body>
+
+</html>

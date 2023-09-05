@@ -1,0 +1,71 @@
+@use 'colors';
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  cursor: pointer;
+
+  p {
+    color: colors.$darker-white;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    .header {
+      transition: color .2s ease-out;
+    }
+
+    .metadata {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .tags {
+        opacity: .25;
+      }
+
+      .date {
+        opacity: .5;
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    gap: 10px;
+  }
+
+  &:hover .info .header {
+    color: colors.$light-blue;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    .info {
+      flex-direction: column;
+      text-align: center;
+
+      .metadata {
+        align-self: flex-start;
+        flex-direction: row-reverse;
+      }
+    }
+
+    .summary {
+      text-align: justify;
+    }
+
+    .btns {
+      justify-content: right;
+    }
+  }
+}

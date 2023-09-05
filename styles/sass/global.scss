@@ -1,0 +1,285 @@
+@use 'colors';
+@use 'globals';
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  padding: 0;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+  text-transform: uppercase;
+
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  font-family: 'Belanosima', sans-serif;
+  color: colors.$purple;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-wrap: balance;
+
+  color: colors.$light-purple;
+}
+
+p {
+  margin: 0;
+}
+
+pre {
+  box-sizing: border-box;
+  overflow: auto;
+
+  max-width: 100%;
+  padding: 10px;
+  border-radius: globals.$border-radius-medium;
+
+  background-color: colors.$white-10;
+  color: colors.$white;
+
+  code {
+    background-color: transparent;
+  }
+}
+
+code {
+  text-wrap: wrap;
+
+  font-size: .9rem;
+  padding: 2px;
+  border-radius: globals.$border-radius-small;
+
+  background-color: colors.$white-10;
+  color: colors.$white-75;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+ul {
+  padding-left: 20px;
+
+  li {
+    color: colors.$white;
+    margin-bottom: 10px;
+  }
+}
+
+html {
+  height: 100%;
+
+  body {
+    display: grid;
+    grid-template-rows: 1fr 300px 1fr;
+
+    height: 100%;
+    margin: 0;
+    padding: 0 globals.$main-padding;
+
+    background-color: colors.$black-navy;
+    background-size: cover;
+    background-image: url('../../public/img/bg-dark.svg');
+    background-repeat: no-repeat;
+
+    #logo {
+      font-family: 'Permanent Marker', serif;
+      color: colors.$light-blue;
+      font-size: 1.2rem;
+    }
+
+    .separator {
+      width: 100%;
+      min-height: 1px;
+      opacity: .1;
+      margin: 50px 0;
+
+      background-color: colors.$white;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 20px;
+
+      .content {
+        color: colors.$white;
+      }
+    }
+
+    #wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      gap: 50px;
+      margin-top: 150px;
+
+      main {
+        display: flex;
+        flex-direction: column;
+
+        gap: 50px;
+        flex: 9999;
+      }
+
+      aside {
+        display: flex;
+        flex-direction: column;
+
+        gap: 50px;
+        flex: 1;
+        flex-basis: 300px;
+
+        section {
+          display: flex;
+          flex-direction: column;
+
+          gap: 50px;
+        }
+
+        // TOP KATEGORIE
+        #top-tags {
+          display: flex;
+          flex-wrap: wrap;
+
+          gap: 10px;
+        }
+
+        // TOP ARTYKUŁY
+        #top-posts {
+          width: fit-content;
+
+          button {
+            text-align: left;
+            align-items: center;
+
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+
+            svg {
+              width: 15px;
+              height: 15px;
+              opacity: .5;
+
+              color: colors.$light-purple;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+
+      width: 100%;
+      padding-bottom: 50px;
+
+      color: colors.$white;
+
+      #copyright {
+        opacity: .5;
+      }
+
+      #author {
+        opacity: .75;
+      }
+    }
+
+    .loading-fallback-wrapper {
+      position: absolute;
+
+      left: 50%;
+      translate: -50% 0;
+
+      svg {
+        width: 30px;
+        height: 30px;
+
+        color: colors.$white;
+        opacity: .5;
+      }
+    }
+
+    .hidden {
+      position: absolute;
+      opacity: 0;
+      top: -20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  header {
+    align-items: center;
+
+    .content {
+      align-items: center;
+    }
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  ul p {
+    text-align: left;
+  }
+
+  html body {
+    padding: 0 20px;
+
+    #wrapper {
+      #top-tags .tag {
+        flex: 1;
+        flex-basis: 100px;
+      }
+
+      #top-posts {
+        align-self: center;
+      }
+    }
+
+    footer {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+  }
+}
+
+[data-theme=light] {
+  body {
+    background-image: url('../../public/img/bg-light.svg');
+    background-color: colors.$blue;
+  }
+
+  h1,
+  h2 {
+    color: colors.$white;
+  }
+
+  #logo {
+    color: colors.$navy;
+  }
+}

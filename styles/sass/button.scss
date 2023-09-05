@@ -1,0 +1,117 @@
+@use 'colors';
+@use 'globals';
+
+button,
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+
+  // IKONY
+  svg {
+    width: 15px;
+    min-height: 15px;
+
+    color: colors.$white;
+
+    &[data-color=stroke] {
+      stroke: colors.$white;
+    }
+
+    &[data-color=fill] {
+      fill: colors.$white;
+    }
+  }
+
+  // PRZYCISK NAWIGACJI
+  &.nav {
+    background-color: transparent;
+    transition-property: color;
+    color: colors.$white;
+
+    svg {
+      width: 20px;
+      min-height: 20px;
+    }
+
+    &:hover {
+      color: colors.$light-blue;
+    }
+  }
+
+  // PRZYCISK PRZEŹROCZYSTY
+  &.transparent {
+    background-color: transparent;
+    transition-property: color;
+    color: colors.$white;
+
+    &:hover {
+      color: colors.$light-blue;
+    }
+  }
+
+  // PRZYCISK DRUGORZĘDNY
+  &.secondary {
+    padding: 5px 10px;
+
+    background-color: transparent;
+    transition-property: color;
+    color: colors.$white;
+
+    &:hover {
+      color: colors.$light-blue;
+    }
+  }
+
+  // PRZYCISK TAGA
+  &.tag {
+    padding: 5px 10px;
+    border-radius: globals.$border-radius-small;
+
+    background-color: colors.$blue;
+    color: colors.$white;
+
+    &:hover {
+      background-color: lighten(colors.$blue, 10);
+      scale: 1.05;
+    }
+  }
+}
+
+[data-theme=light] {
+  button {
+    span {
+      color: colors.$white;
+    }
+
+    svg {
+      color: colors.$black-grey;
+
+      &[data-color=stroke] {
+        stroke: colors.$black-grey;
+      }
+
+      &[data-color=fill] {
+        fill: colors.$black-grey;
+      }
+    }
+
+    &.tag {
+      color: colors.$navy;
+      background-color: colors.$white;
+
+      &:hover {
+        background-color: lighten(colors.$white, 5);
+      }
+    }
+  }
+}

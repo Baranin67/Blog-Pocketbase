@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  padding: 0;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: "Belanosima", sans-serif;
+  color: #794dff;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-wrap: balance;
+  color: #c6b3ff;
+}
+
+p {
+  margin: 0;
+}
+
+pre {
+  box-sizing: border-box;
+  overflow: auto;
+  max-width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(230, 230, 230, 0.1);
+  color: #e6e6e6;
+}
+pre code {
+  background-color: transparent;
+}
+
+code {
+  text-wrap: wrap;
+  font-size: 0.9rem;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: rgba(230, 230, 230, 0.1);
+  color: rgba(230, 230, 230, 0.75);
+  font-family: "JetBrains Mono", monospace;
+}
+
+ul {
+  padding-left: 20px;
+}
+ul li {
+  color: #e6e6e6;
+  margin-bottom: 10px;
+}
+
+html {
+  height: 100%;
+}
+html body {
+  display: grid;
+  grid-template-rows: 1fr 300px 1fr;
+  height: 100%;
+  margin: 0;
+  padding: 0 15%;
+  background-color: #060038;
+  background-size: cover;
+  background-image: url("../../public/img/bg-dark.svg");
+  background-repeat: no-repeat;
+}
+html body #logo {
+  font-family: "Permanent Marker", serif;
+  color: #8696fe;
+  font-size: 1.2rem;
+}
+html body .separator {
+  width: 100%;
+  min-height: 1px;
+  opacity: 0.1;
+  margin: 50px 0;
+  background-color: #e6e6e6;
+}
+html body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+html body header .content {
+  color: #e6e6e6;
+}
+html body #wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 150px;
+}
+html body #wrapper main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex: 9999;
+}
+html body #wrapper aside {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex: 1;
+  flex-basis: 300px;
+}
+html body #wrapper aside section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+html body #wrapper aside #top-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+html body #wrapper aside #top-posts {
+  width: fit-content;
+}
+html body #wrapper aside #top-posts button {
+  text-align: left;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+html body #wrapper aside #top-posts button svg {
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+  color: #c6b3ff;
+}
+html body footer {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
+  color: #e6e6e6;
+}
+html body footer #copyright {
+  opacity: 0.5;
+}
+html body footer #author {
+  opacity: 0.75;
+}
+html body .loading-fallback-wrapper {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+}
+html body .loading-fallback-wrapper svg {
+  width: 30px;
+  height: 30px;
+  color: #e6e6e6;
+  opacity: 0.5;
+}
+html body .hidden {
+  position: absolute;
+  opacity: 0;
+  top: -20px;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    align-items: center;
+  }
+  header .content {
+    align-items: center;
+  }
+
+  h1,
+h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  ul p {
+    text-align: left;
+  }
+
+  html body {
+    padding: 0 20px;
+  }
+  html body #wrapper #top-tags .tag {
+    flex: 1;
+    flex-basis: 100px;
+  }
+  html body #wrapper #top-posts {
+    align-self: center;
+  }
+  html body footer {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
+[data-theme=light] body {
+  background-image: url("../../public/img/bg-light.svg");
+  background-color: #4c44e4;
+}
+[data-theme=light] h1,
+[data-theme=light] h2 {
+  color: #e6e6e6;
+}
+[data-theme=light] #logo {
+  color: #10009e;
+}
+
+/*# sourceMappingURL=global.css.map */
